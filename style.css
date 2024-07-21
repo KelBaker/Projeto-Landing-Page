@@ -1,14 +1,14 @@
-* {
-    margin: 0px;
-    font-family: "inter";
-}
 
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'inter';
+}
 
 #logo {
-margin-left: 50px;
-margin-top: 50px;
+    margin-left: 50px;
+    margin-top: 50px;
 }
-
 
 #tíitulo-menusuperior {
     margin-left: 150px;
@@ -18,28 +18,33 @@ margin-top: 50px;
 #texto-menusuperior {
     margin-left: 150px;
     margin-top: 50px;
-    padding-bottom: 100PX;
+    padding-bottom: 100px;
 }
 
 #menusuperior {
     background-image: url(./imagens/fundo-menusuperior.svg);
     color: aliceblue;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
 }
 
 #menuinfornacional {
     background-color: #EAECE5;
     display: grid;
     grid-auto-flow: column;
+    padding: 10px;
 }
-
 
 .icone {
     margin: 50px 0px 50px 100px;
     padding: 25px;
 }
 
-
-#secaovideo{
+#secaovideo {
     display: grid;
     grid-auto-flow: column;
     columns: auto;
@@ -50,7 +55,7 @@ margin-top: 50px;
     align-items: center;
 }
 
-#textovideo{
+#textovideo {
     margin-top: 20px;
     font-size: 22px;
 }
@@ -60,7 +65,6 @@ margin-top: 50px;
     margin-top: 50px;
     font-size: 37px;
 }
-
 
 #video {
     margin: 20px 25px 50px 100px;
@@ -81,25 +85,23 @@ margin-top: 50px;
     margin-top: 25px;
     display: grid;
     grid-auto-flow: column;
-}   
+}
 
 .card {
     margin-left: 5px;
-    box-shadow: 0px 15px 20px;
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.445);
+    border-radius: 15px;
 }
 
-.card:hover{
-    transform: translate(-15px,-7px);
-    transition-duration: 1s;
-    cursor:pointer;
+.card:hover {
+    transform: translate(-5px, -5px);
+    transition-duration: 0.5s;
+    cursor: pointer;
 }
-
-
 
 #seta-esquerda {
-    display:none;
+    display: none;
 }
-    
 
 #Bruna {
     display: none;
@@ -108,12 +110,11 @@ margin-top: 50px;
 .seta {
     margin-top: 30%;
     cursor: pointer;
-
 }
 
-.seta:hover{
+.seta:hover {
     transform: translateY(-7px);
-    transition-duration: 0,5s;
+    transition-duration: 0.5s;
 }
 
 #formulario {
@@ -129,7 +130,7 @@ margin-top: 50px;
 
 input {
     width: 350px;
-    height:47px;
+    height: 47px;
     background-color: #e8f4ff;
     margin: 22px;
     border-radius: 5px;
@@ -137,7 +138,7 @@ input {
     border: 0px;
 }
 
-button{
+button {
     background-color: #247ba0;
     height: 40px;
     width: 250px;
@@ -154,8 +155,133 @@ button:hover {
     transform: translateY(-5px);
     transition-duration: 1s;
     box-shadow: 0px 15px 20px #05103075;
-
 }
 
 
+@media only screen and (min-width: 400px) and (max-width: 520px) {
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
 
+    #logo {
+        font-size: 10px;
+        margin-left: 20px;
+        margin-top: 20px;
+        width: 65px;
+    }
+
+    #tíitulo-menusuperior {
+        margin-left: 20px;
+        margin-top: 20px;
+        font-size: 18px;
+    }
+
+    #texto-menusuperior {
+        margin-left: 20px;
+        margin-top: 10px;
+        padding-bottom: 50px;
+        font-size: 14px;
+    }
+
+    #menuinfornacional {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+    }
+
+    #menuinfornacional p {
+        text-align: center;
+        margin-right: 5px;
+        padding: 10px;
+        font-style: bold;
+    }
+
+    #menuinfornacional img {
+        width: 20px;
+    }
+
+    .icone {
+        padding: 10px;
+        margin: 0;
+    }
+
+    #secaovideo {
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 25px;
+    }
+
+    #secaovideo h1 {
+        font-size: 20px;
+        text-align: center;
+        margin-top: 18px;
+    }
+
+    #secaovideo p {
+        text-align: center;
+        line-height: 1.7;
+        font-size: 12px;
+    }
+
+    #video {
+        margin: auto;
+        width: 100%;
+        height: 250px;
+    }
+
+    #carrossel {
+        padding: 20px;
+    }
+
+    #titulo-carrossel {
+        font-size: 20px;
+    }
+
+    #div-cards {
+        display: flex;
+        flex-direction: row;
+        overflow-x: auto;
+    }
+
+    .card {
+        flex: 0 0 auto;
+        margin: 10px;
+        min-width: 150px;
+        box-shadow: none;
+        max-width: 200px;
+        overflow: hidden;
+    }
+
+    .card:hover {
+        transform: none;
+    }
+
+    #Bruna {
+        display: flex;
+    }
+
+    input {
+        width: calc(100% - 44px);
+    }
+
+    button {
+        width: calc(100% - 44px);
+    }
+
+    #titulovideo {
+        font-size: 24px;
+    }
+
+    #textovideo {
+        font-size: 16px;
+    }
+
+    #seta-direita,
+    #seta-esquerda {
+        display: none;
+        width: 100px;
+    }
+}
